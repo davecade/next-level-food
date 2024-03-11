@@ -19,10 +19,11 @@ const ImagePicker = ({ label, name }) => {
 		}
 
 		const fileReader = new FileReader();
+		fileReader.readAsDataURL(file);
+
 		fileReader.onload = () => {
 			setPickedImage(fileReader.result);
 		};
-		fileReader.readAsDataURL(file);
 	};
 
 	return (
