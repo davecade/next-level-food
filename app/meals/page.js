@@ -6,6 +6,7 @@ import { getMeals } from "@/lib/meals";
 
 const Meals = async () => {
 	const meals = await getMeals();
+	console.log("meals", meals);
 
 	return <MealsGrid meals={meals} />;
 };
